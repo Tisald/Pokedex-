@@ -12,9 +12,16 @@ div.gallery {
   }
   div.pics{
     margin: 5px;
-    border: 4px solid rgb(0, 0, 0);
+    border: transparent
+  
+  }
+  h2{
+    padding-left: 45px;
   }
 
+div.btn{
+  padding-left: 45px;
+}
   
   div.gallery img {
     width: 400;
@@ -22,7 +29,8 @@ div.gallery {
   }
 
   div.descr {
-    padding: 25px;
+    font-size:  20px;;
+    padding: 5px;
     text-align: center;
   }
 
