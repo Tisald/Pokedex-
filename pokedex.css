@@ -5,16 +5,25 @@ div.gallery {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* margin: 5px;
-    border: 1px solid #ccc;
+    /* 
+    
     float: left;
     width: 180px; */
+  }
+  div.pics{
+    margin: 5px;
+    border: 4px solid rgb(0, 0, 0);
   }
 
   
   div.gallery img {
     width: 400;
     height: auto;
+  }
+
+  div.descr {
+    padding: 25px;
+    text-align: center;
   }
 
 
