@@ -8,7 +8,7 @@
 <meta name="author" content="Tisal Dayaratna">
 <link rel="stylesheet" href="pokedex.css">
 </head>
-
+<!-- Title of Page -->
 <body>
 <script src ="pokedex.js"></script>
 <div class="center">
@@ -17,15 +17,22 @@
 
 <h2>Search Pokemon:</h2>
 
+<!-- Button and from to search by number -->
 <div class="btn">
-    <form id="form"> 
-        <input type="search" id="query" name="q" placeholder="Search...">
-        <button>Search</button>
+    <form id="form1"> 
+        <input type="number" id="search1" name="search1" placeholder="Search..." min="1" max="20">
+        <button type = "button" onclick="searchByNumber()">Search</button>
       </form>
+</div>
+<!-- Button and from to search by name -->
+  <div class="btn">
+    <form id="form2"> 
+        <input type="text" id="search2" name="search2" placeholder="Search..." maxlength="20">
+        <button type = "button" onclick="searchByName()">Search</button>
+    </form>
   </div>
 
-
-
+<!-- All the diffrent pokemon and their descriptions in an unordered list-->
 <ul>
     <div class="gallery">
         <div class="pics">
@@ -33,7 +40,7 @@
                 <img src="pokemon\1.png" alt="">
             </table>
             <div class="descr">
-                <p>1# Bublbasaur<br>
+                <p><div class="number">#1</div><div class="name"> Bublbasaur</div>
                    Categorey: Seed<br>
                    Weight: 15.2 lbs<br>
                    Height: 2' 04"
@@ -46,7 +53,7 @@
                 <img src="pokemon\2.png" alt="">
             </table>
             <div class="descr">
-                <p>2# Ivysaur<br>
+                <p><div class="number">#2</div><div class="name"> Ivysaur</div>
                     Categorey: Seed<br>
                     Weight: 28.7 lbs<br>
                     Height: 3' 03"
@@ -58,7 +65,7 @@
                 <img src="pokemon\3-mega.png" alt="">
             </table>
             <div class="descr">
-                <p>3# Venusaur<br>
+                <p><div class="number">#3</div><div class="name"> Venusaur</div>
                     Categorey: Seed<br>
                     Weight: 220.5 lbs<br>
                     Height: 6' 07"
@@ -70,7 +77,7 @@
                 <img src="pokemon\4.png" alt="">
             </table>
             <div class="descr">
-                <p>4# Charmander<br>
+                <p><div class="number">#4</div><div class="name"> Charmander</div>
                     Categorey: Lizard<br>
                     Weight: 18.7 lbs<br>
                     Height: 2' 00"
@@ -82,7 +89,7 @@
                 <img src="pokemon\5.png" alt="">
             </table>
             <div class="descr">
-                <p>5# Charmeleon<br>
+                <p><div class="number">#5</div><div class="name"> Charmeleon</div>
                     Categorey: Lizard<br>
                     Weight: 41.9 lbs<br>
                     Height: 3' 07"
@@ -94,7 +101,7 @@
                 <img src="pokemon\6.png" alt="">
             </table>
             <div class="descr">
-                <p>6# Charizard<br>
+                <p><div class="number">#6</div><div class="name"> Charizard</div>
                     Categorey: Lizard<br>
                     Weight: 199.5 lbs<br>
                     Height: 5' 07"
@@ -106,7 +113,7 @@
                 <img src="pokemon\7.png" alt="">
             </table>
             <div class="descr">
-                <p>7# Squirtle<br>
+                <p><div class="number">#7</div><div class="name"> Squirtle</div>
                     Categorey: Tiny Turtle<br>
                     Weight: 19.8 lbs<br>
                     Height: 1' 08"
@@ -118,7 +125,7 @@
                 <img src="pokemon\8.png" alt="">
             </table>
             <div class="descr">
-                <p>8# Wartortle<br>
+                <p><div class="number">#8</div><div class="name"> Wartortle</div>
                     Categorey: Turtle<br>
                     Weight: 49.6 lbs<br>
                     Height: 3' 03"
@@ -130,7 +137,7 @@
                 <img src="pokemon\9-mega.png" alt="">
             </table>
             <div class="descr">
-                <p>9# Blastoise<br>
+                <p><div class="number">#9</div><div class="name"> Blastoise</div>
                     Categorey: Shellfish<br>
                     Weight: 188.5 lbs<br>
                     Height: 5' 03"
@@ -142,7 +149,7 @@
                 <img src="pokemon\10.png" alt="">
             </table>
             <div class="descr">
-                <p>10# Caterpie<br>
+                <p><div class="number">#10</div><div class="name"> Caterpie</div>
                     Categorey: Worm<br>
                     Weight: 6.4 lbs<br>
                     Height: 1' 00"
@@ -154,7 +161,7 @@
                 <img src="pokemon\11.png" alt="">
             </table>
             <div class="descr">
-                <p>11# Metapod<br>
+                <p><div class="number">#11</div><div class="name"> Metapod</div>
                     Categorey: Cocoon<br>
                     Weight: 21.8 lbs<br>
                     Height: 2' 04"
@@ -166,7 +173,7 @@
                 <img src="pokemon\12.png" alt="">
             </table>
             <div class="descr">
-                <p>12# Butterfree<br>
+                <p><div class="number">#12</div><div class="name"> Butterfree</div>
                     Categorey: Butterfly<br>
                     Weight: 70.5 lbs<br>
                     Height: 3' 07"
@@ -178,7 +185,7 @@
                 <img src="pokemon\13.png" alt="">
             </table>
             <div class="descr">
-                <p>13# Weedle<br>
+                <p><div class="number">#13</div><div class="name"> Weedle</div>
                     Categorey: Hairy Bug<br>
                     Weight: 7.1 lbs<br>
                     Height: 1' 00"
@@ -190,7 +197,7 @@
                 <img src="pokemon\14.png" alt="">
             </table>
             <div class="descr">
-                <p>14# Kakuna<br>
+                <p><div class="number">#14</div><div class="name"> Kakuna</div>
                     Categorey: Cocoon<br>
                     Weight: 22.0 lbs<br>
                     Height: 2' 00"
@@ -202,7 +209,7 @@
                 <img src="pokemon\15-mega.png" alt="">
             </table>
             <div class="descr">
-                <p>15# Beedrill<br>
+                <p><div class="number">#15</div><div class="name"> Beedrill</div>
                     Categorey: Poison Bee<br>
                     Weight: 65.0 lbs<br>
                     Height: 3' 03"
@@ -214,7 +221,7 @@
                 <img src="pokemon\16.png" alt="">
             </table>
             <div class="descr">
-                <p>16# Pidgey<br>
+                <p><div class="number">#16</div><div class="name"> Pidgey</div>
                     Categorey: Tiny Bird<br>
                     Weight: 4.0 lbs<br>
                     Height: 1' 00"
@@ -226,7 +233,7 @@
                 <img src="pokemon\17.png" alt="">
             </table>
             <div class="descr">
-                <p>17# Pidgeotto<br>
+                <p><div class="number">#17</div><div class="name"> Pidgeotto</div>
                     Categorey: Bird<br>
                     Weight: 66.1 lbs<br>
                     Height: 3' 07"
@@ -238,7 +245,7 @@
                 <img src="pokemon\18-mega.png" alt="">
             </table>
             <div class="descr">
-                <p>18# Pidgeot<br>
+                <p><div class="number">#18</div><div class="name"> Pidgeot</div>
                     Categorey: Brid<br>
                     Weight: 87.1 lbs<br>
                     Height: 4' 11"
@@ -250,7 +257,7 @@
                 <img src="pokemon\19.png" alt="">
             </table>
             <div class="descr">
-                <p>19# Rattata<br>
+                <p><div class="number">#19</div><div class="name"> Rattata</div>
                     Categorey: Mouse<br>
                     Weight: 7.7 lbs<br>
                     Height: 1' 00"
@@ -262,7 +269,7 @@
                 <img src="pokemon\20.png" alt="">
             </table>
             <div class="descr">
-                <p>20# Raticate<br>
+                <p><div class="number">#20</div><div class="name"> Raticate</div>
                     Categorey: Mouse<br>
                     Weight: 40.8 lbs<br>
                     Height: 2' 04"

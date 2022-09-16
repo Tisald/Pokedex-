@@ -5,22 +5,21 @@ div.gallery {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* 
-    
-    float: left;
-    width: 180px; */
+
   }
   div.pics{
     margin: 5px;
     border: transparent
-  
   }
+  
   h2{
     padding-left: 45px;
   }
 
 div.btn{
   padding-left: 45px;
+  display: flex;
+  justify-content: space-between;
 }
   
   div.gallery img {
