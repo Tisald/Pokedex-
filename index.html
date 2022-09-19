@@ -30,7 +30,7 @@
     <h3>Search Pokemon by name:</h3>
   <div class="btn">
     <form id="form2"> 
-        <input type="text" id="search2" name="search2" placeholder="Search..." maxlength="20" onkeyup="searchByName()">
+        <input type="text" id="search2" name="search2" placeholder="Search..." maxlength="20" onkeyup="searchByName()" onkeydown="return letters(event)">
         <button id = "btn2" type = "button" onclick="searchByName()"(keydown.enter)="searchByNa me()">Search</button>
     </form>
   </div>
