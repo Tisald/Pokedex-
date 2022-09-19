@@ -9,17 +9,22 @@ div.gallery {
   }
   div.pics{
     margin: 5px;
-    border: transparent
+    border: transparent;
+    
   }
-  
+
   h2{
-    padding-left: 45px;
+    padding-left: 40px;
+    font-size : 20px;
+  }
+  h3{
+    padding-left: 40px;
+    font-size : 20px;
   }
 
 div.btn{
   padding-left: 45px;
   display: flex;
-  justify-content: space-between;
 }
   
   div.gallery img {
@@ -32,6 +37,13 @@ div.btn{
     padding: 5px;
     text-align: center;
   }
+  p {
+    font-size : 20px;
+    /* background-color : #cfc; */
+    padding : 0;
+    margin : 0;
+    line-height : 20px;
+}
 
 
 
@@ -39,3 +51,4 @@ div.btn{
   text-align: center;
   border: 3px solid rgb(0, 0, 0);
 }
+
