@@ -1,18 +1,23 @@
+/* Site background */
 body{
     background-color:lightcoral;
 }
+/* Images and their borders */
 div.gallery {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
   }
   div.pics{
     margin: 5px;
-    border: transparent;
+    border:transparent;
     
   }
-
+  div.gallery img {
+    width: 400;
+    height: auto;
+  }
+/* Text fields for the froms */
   h2{
     padding-left: 40px;
     font-size : 20px;
@@ -26,18 +31,14 @@ div.btn{
   padding-left: 45px;
   display: flex;
 }
-  
-  div.gallery img {
-    width: 400;
-    height: auto;
-  }
 
-  div.descr {
+/* Text and descritpion under images */
+div.descr {
     font-size:  20px;;
     padding: 5px;
     text-align: center;
-  }
-  p {
+}
+p {
     font-size : 20px;
     /* background-color : #cfc; */
     padding : 0;
