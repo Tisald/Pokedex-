@@ -3,20 +3,17 @@ body{
     background-color:lightcoral;
 }
 /* Images and their borders */
-div.gallery {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
   }
   div.pics{
-    margin: 5px;
-    border:transparent;
-    
+    margin: 10px;
+    background-color: rgb(196, 104, 104);
+    padding:0.8%;
   }
-  div.gallery img {
-    width: 400;
-    height: auto;
-  }
+
 /* Text fields for the froms */
   h2{
     padding-left: 40px;
@@ -46,8 +43,7 @@ p {
     line-height : 20px;
 }
 
-
-
+/* Title */
 .center {
   text-align: center;
   border: 3px solid rgb(0, 0, 0);

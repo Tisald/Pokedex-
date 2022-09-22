@@ -5,7 +5,6 @@ function searchByNumber(){
     let input = document.getElementById("search1").value;
     let x = document.getElementsByClassName("number");
     let b = document.getElementsByClassName("pics");
-    let n = document.getElementsByClassName("name");
     console.log(input);
     for(i=0;i<x.length;i++){
         let temp = x[i].innerHTML;
@@ -19,17 +18,10 @@ function searchByNumber(){
         }
         else{
             b[i].style.display = "block";
-            names.push(n[i].innerHTML);
         }
-        
     }
-    var txt = names.toString();
-   //alert(names);
-   console.log(txt);
-    //alert(text);
- 
-
 }
+
 //Search Pokedex by name
 function searchByName(){
     let input = document.getElementById("search2").value;
@@ -50,10 +42,10 @@ function searchByName(){
         else{
             b[i].style.display="block"
         }
-        
     }
- 
 }
+
+// Verify only alphabet inputs into form
 function letters(event) {
   var key = event.keyCode;
   return ((key >= 65 && key <= 90) || key == 8);
