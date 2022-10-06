@@ -27,12 +27,7 @@ function searchByNumber(){
     h4.textContent = "something";
     document.body.appendChild(h4);
 
-    // const fragment = document.createDocumentFragment();
-    // const li = fragment
-    //   .appendChild(document.createElement('section'))
-    //   .appendChild(document.createElement('ul'));
-    // ul.textContent = 'hello world';
-    // document.body.appendChild(fragment);
+
 }
 
 //Search Pokedex by name

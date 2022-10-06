@@ -1,6 +1,6 @@
 /* Site background */
 body{
-    background-color:lightcoral;
+    background-color:rgb(25, 100, 29);
 }
 /* Images and their borders */
 .gallery {
@@ -10,8 +10,9 @@ body{
   }
   div.pics{
     margin: 10px;
-    background-color: rgb(196, 104, 104);
+    background-color: rgb(121, 135, 116);
     padding:0.8%;
+    border: 2px solid rgb(0, 0, 0);
   }
 
 /* Text fields for the froms */
@@ -46,6 +47,7 @@ p {
 /* Title */
 .center {
   text-align: center;
-  border: 3px solid rgb(0, 0, 0);
+  border: 4px solid rgb(0, 0, 0);
+  background-color:  rgb(121, 135, 116);
 }
 
