@@ -1,39 +1,54 @@
 
+//New List
+
+
 //Search pokedex by number
 function searchByNumber(){
 
-    // let sp1 = document.createElement("ul");
-    // sp1.setAttribute('id','newList');
-    // let sp2 = document.getElementById("menue");
-    // let parentDiv = sp2.parentNode;
-    // parentDiv.insertBefore(sp1, sp2);
+    let sp1 = document.createElement("ul");
+    sp1.setAttribute('id','newList');
     
-    // let li = document.createElement("li");
-    // sp1.appendChild(li);
-    // li.appendChild(document.createTextNode("hello"));
+    let sp2 = document.getElementById("menue");
+    
+    let parentDiv = sp2.parentNode;
+    parentDiv.insertBefore(sp1, sp2);
+    
+    let li = document.createElement("li");
+    li.setAttribute('id','newList2');
+    sp1.appendChild(li);
 
-
+    //Filter
     let input = document.getElementById("search1").value;
     let x = document.getElementsByClassName("number");
     let b = document.getElementsByClassName("pics");
+    
     console.log(input);
     for(i=0;i<x.length;i++){
         let temp = x[i].firstChild.nodeValue;
 
     
-        if(!temp.includes(input)||input.length==0){
+        if(!temp.includes(input)){
         console.log("MAtch")
 
-          b[i].style.display = "none";
-          
+          //b[i].style.display = "none";
+
         }
         else{
-            b[i].style.display = "block";
+            
+            var elem = document.createElement("img");
+            elem.src = b[i].firstElementChild.getAttribute('src');
+            elem.id = x[i].firstChild.nodeValue;
+            li.appendChild(elem);
         }
+        if(input.length == 0){
+            const element = document.getElementById('newList');
+            element.remove(true);
         }
-    
+    }
+
 
 }
+
 
 //Search Pokedex by name
 function searchByName(){
