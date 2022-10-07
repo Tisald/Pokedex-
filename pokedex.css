@@ -8,11 +8,17 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
   }
+  h5{
+    padding-left: 40px;
+    font-size : 20px;
+
+  }
   div.pics{
     margin: 10px;
     background-color: rgb(121, 135, 116);
     padding:0.8%;
     border: 2px solid rgb(0, 0, 0);
+    display: none;
   }
 
 /* Text fields for the froms */
