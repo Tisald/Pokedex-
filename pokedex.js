@@ -1,8 +1,9 @@
 
+//Called on page load
 function loadImg(){
 //linking to static page elements
-const staticPocList = document.getElementById("pokemons")
-var staticUL = document.querySelector(".container")
+const currentList = document.getElementById("pokemons")
+var pastList = document.querySelector(".container")
 
 //Needed html elements 
 var newDiv = document.createElement('div');
@@ -13,7 +14,7 @@ newUl.id = "newUl";
 
 //Append new to html document 
 document.body.appendChild(newDiv);
-staticPocList.insertBefore(newDiv,staticUL);
+currentList.insertBefore(newDiv,pastList);
 newDiv.appendChild(newUl);
 }
 
@@ -22,23 +23,20 @@ newDiv.appendChild(newUl);
 var pList = [];
 const pName = [];
 const pNum = [];
-
 let count =0;
 
 //Search pokedex by number
 function searchByNumber(){
 
+    //Getting elements
     const ul = document.getElementById('newUl');
-
-    //Filter
     let input = document.getElementById("search1").value;
-
     let x = document.getElementsByClassName("number");
     let nm = document.getElementsByClassName('name');
     let inf = document.getElementsByClassName("info");
-
     let picture = document.getElementById('poc').getElementsByTagName('img');
 
+    //Creating pokemon element
     var img = document.createElement('img');
     let p = document.createElement('p');
     p.className = "ltrs";
@@ -49,13 +47,13 @@ function searchByNumber(){
 
     count = 0;
     //Removing images
-    removeSearch();
+    removePokemon();
 
     //Saving pokemon info
     for (i = 0; i < x.length; i++) {  
 
         if (!x[i].innerHTML.includes(input)) {
-            //do Nothing 
+            //quick check 
 
         }else {
             newDiv.style.display = "block";
@@ -88,17 +86,15 @@ function searchByNumber(){
 //Search Pokedex by name
 function searchByName(){
 
+    //Getting Elements
     const ul = document.getElementById('newUl');
-    
-    //Filter
     let input = document.getElementById("search2").value;
-
     let x = document.getElementsByClassName("number");
     let nm = document.getElementsByClassName('name');
     let inf = document.getElementsByClassName("info");
-
     let picture = document.getElementById('poc').getElementsByTagName('img');
 
+    //Creating pokemon element
     var img = document.createElement('img');
     let p = document.createElement('p');
     p.className = "ltrs";
@@ -109,13 +105,13 @@ function searchByName(){
 
     count = 0;
     //Removing images
-    removeSearch();
+    removePokemon();
 
     //Saving pokemon info
     for (i = 0; i < nm.length; i++) {  
 
         if (!nm[i].innerHTML.toLowerCase().includes(input)) {
-            //do Nothing 
+            //quick check 
 
         }else {
             newDiv.style.display = "block";
@@ -149,11 +145,11 @@ function letters(event) {
 }
 
 //Removing unwanted results
-function removeSearch(){
+function removePokemon(){
     const temp =document.getElementById("newUl");
     let children = document.querySelectorAll('.child');
-      for(let c of children){
-          temp.removeChild(c);
+      for(let e of children){
+          temp.removeChild(e);
     } 
   }
 
