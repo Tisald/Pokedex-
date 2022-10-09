@@ -3,7 +3,7 @@
 
 function loadImg(){
 //linking to static page elements
-const staticPocList = document.getElementById("pocemonList")
+const staticPocList = document.getElementById("pokemons")
 var staticUL = document.querySelector(".container")
 
 //Needed html elements 
@@ -31,7 +31,6 @@ let count =0;
 function searchByNumber(){
 
     const ul = document.getElementById('newUl');
-    const div = document.getElementById('newDiv');
 
     //Filter
     let input = document.getElementById("search1").value;
@@ -62,7 +61,7 @@ function searchByNumber(){
 
         }else {
             pList[count] = nm[i].innerHTML+" "+inf[i].textContent;
-            pNum[count] =nm[i].innerHTML+"  "+x[i].innerHTML+" \n "+inf[i].textContent;
+            pNum[count] =nm[i].innerHTML+" "+x[i].innerHTML +" "+inf[i].textContent;
             setOfImages[count] = picture[i].cloneNode(true);
             count++;              
         }
@@ -75,9 +74,9 @@ function searchByNumber(){
         p = pNum[j] ;
         img = setOfImages[j];
         ul.appendChild(li);
-        li.append(p);
         li.appendChild(img);
-        
+        li.append(p);
+    
     }
  
 }
@@ -88,8 +87,7 @@ function searchByNumber(){
 function searchByName(){
 
     const ul = document.getElementById('newUl');
-    const div = document.getElementById('newDiv');
-
+    
     //Filter
     let input = document.getElementById("search2").value;
 
@@ -144,12 +142,12 @@ function letters(event) {
   return ((key >= 65 && key <= 90) || key == 8);
 }
 
+//Removing unwanted results
 function removeSearch(){
     const temp =document.getElementById("newUl");
     let children = document.querySelectorAll('.child');
       for(let c of children){
           temp.removeChild(c);
-          console.log("I am here at the moment");
   } 
   }
 
