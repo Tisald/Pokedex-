@@ -1,6 +1,4 @@
 
-
-
 function loadImg(){
 //linking to static page elements
 const staticPocList = document.getElementById("pokemons")
@@ -54,12 +52,13 @@ function searchByNumber(){
     removeSearch();
 
     //Saving pokemon info
-    for (i = 0; i < nm.length; i++) {  
+    for (i = 0; i < x.length; i++) {  
 
         if (!x[i].innerHTML.includes(input)) {
             //do Nothing 
 
         }else {
+            newDiv.style.display = "block";
             pList[count] = nm[i].innerHTML+" "+inf[i].textContent;
             pNum[count] =nm[i].innerHTML+" "+x[i].innerHTML +" "+inf[i].textContent;
             setOfImages[count] = picture[i].cloneNode(true);
@@ -77,6 +76,9 @@ function searchByNumber(){
         li.appendChild(img);
         li.append(p);
     
+    }
+    if(input.length==0){
+        newDiv.style.display = "none";
     }
  
 }
@@ -116,6 +118,7 @@ function searchByName(){
             //do Nothing 
 
         }else {
+            newDiv.style.display = "block";
             pList[count] = nm[i].innerHTML+" "+inf[i].textContent;
             pNum[count] =nm[i].innerHTML+"  "+x[i].innerHTML+" \n "+inf[i].textContent;
             setOfImages[count] = picture[i].cloneNode(true);
@@ -134,6 +137,9 @@ function searchByName(){
         li.appendChild(img);
         
     }
+    if(input.length==0){
+        newDiv.style.display = "none";
+    }
 }
 
 // Verify only alphabet inputs into form
@@ -148,7 +154,7 @@ function removeSearch(){
     let children = document.querySelectorAll('.child');
       for(let c of children){
           temp.removeChild(c);
-  } 
+    } 
   }
 
 
